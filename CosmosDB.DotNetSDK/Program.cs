@@ -47,17 +47,16 @@ namespace CosmosDb.DotNetSdk
 		private static void ShowMenu()
 		{
 			Console.WriteLine(@"Cosmos DB SQL API .NET SDK demos
+				DB Databases
+				CO Collections
+				DO Documents
+				IX Indexing
+				UP Users & Permissions
 
-DB Databases
-CO Collections
-DO Documents
-IX Indexing
-UP Users & Permissions
+				C  Cleanup
 
-C  Cleanup
-
-Q  Quit
-");
+				Q  Quit
+				");
 		}
 
 		private async static Task RunDemo(Func<Task> demoMethod)

@@ -53,7 +53,7 @@ namespace CallingASecureAPI
                 .WithAuthority(AzureCloudInstance.AzurePublic, "549a973a-fda2-4190-9ee8-67445857b006")
                 .WithClientSecret(CLIENTSECRET).Build();
 
-            var scopes = new List<string>() { "https://vault.azure.net/.default" };
+            var scopes = new List<string>() { "https://vault.azure.net/User.Read.All" };
 
             var result = await app.AcquireTokenForClient(scopes).ExecuteAsync().ConfigureAwait(false);
 

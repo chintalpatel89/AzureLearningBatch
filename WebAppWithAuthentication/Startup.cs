@@ -29,8 +29,8 @@ namespace WebAppWithAuthentication
         {
             services.AddMicrosoftWebAppAuthentication(Configuration, "AzureAd");
             services.AddRazorPages().AddMvcOptions(options => {
-                //var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
-                //options.Filters.Add(new AuthorizeFilter(policy));
+                var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+                options.Filters.Add(new AuthorizeFilter(policy));
 
             });
             services.AddControllersWithViews();

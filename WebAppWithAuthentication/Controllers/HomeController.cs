@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using WebAppWithAuthentication.Models;
-using Microsoft.Identity.
+//using Microsoft.Identity.Web.
 
 namespace WebAppWithAuthentication.Controllers
 {
@@ -20,6 +20,7 @@ namespace WebAppWithAuthentication.Controllers
             _logger = logger;
         }
 
+        [AllowAnonymous]
         public IActionResult Index()
         {
             return View();
